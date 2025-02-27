@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2828b8">
+    <title>فروشگاه امیری / صفحه اصلی</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>فروشگاه کفش امیری</h1>
+        <nav>
+            <ul>
+                <li><a href="محصول.html">محصولات</a></li>
+                <li><a href="درباره ما.html">درباره ما</a></li>
+                <li><a href="تماس.html">تماس با ما</a></li>
+                <li class="cart-icon">
+                    <a href="#" id="cart-button">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- سبد خرید -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>سبد خرید</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total">
+                <p>مجموع: <span id="total-price">0</span> تومان</p>
+            </div>
+        </div>
+        <a href="#"><button id="checkout-button">تکمیل خرید</button></a>
+    </div>
+
+    <div class="container">
+        <h1 class="main-title">محصولات فروشگاه</h1>
+        
+        <main>
+            <section class="products-container">
+                <!-- ردیف اول محصولات -->
+                <div class="products-row">
+                    <!-- محصول اول -->
+                    <div class="product" data-id="1" data-name="آدیداس بالنسیاگا" data-price="1500000">
+                        <img src="بالن.jpg" alt="آدیداس بالنسیاگا">
+                        <h3>آدیداس بالنسیاگا</h3>
+                        <p class="description">کفش ورزشی مناسب پیاده‌روی</p>
+                        <div class="price-container">
+                            <del class="old-price">2,000,000 تومان</del>
+                            <p class="price">1,500,000 تومان</p>
+                        </div>
+                        <button class="add-to-cart">افزودن به سبد خرید</button>
+                    </div>
+
+                    <!-- محصول دوم -->
+                    <div class="product" data-id="2" data-name="آدیداس فارماتون" data-price="2500000">
+                        <img src="فار.jpg" alt="آدیداس فارماتون">
+                        <h3>آدیداس فارماتون</h3>
+                        <p class="description">کفش ورزشی مناسب دویدن</p>
+                        <div class="price-container">
+                            <del class="old-price">3,000,000 تومان</del>
+                            <p class="price">2,500,000 تومان</p>
+                        </div>
+                        <button class="add-to-cart">افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+                <!-- ردیف دوم محصولات -->
+                <div class="products-row">
+                    <!-- محصول سوم -->
+                    <div class="product" data-id="3" data-name="آدیداس استابیل" data-price="2500000">
+                        <img src="استابیل.jpg" alt="آدیداس استابیل">
+                        <h3>آدیداس استابیل</h3>
+                        <p class="description">کفش ورزشی مناسب فوتبال</p>
+                        <div class="price-container">
+                            <del class="old-price">3,000,000 تومان</del>
+                            <p class="price">2,500,000 تومان</p>
+                        </div>
+                        <button class="add-to-cart">افزودن به سبد خرید</button>
+                    </div>
+
+                    <!-- محصول چهارم -->
+                    <div class="product" data-id="4" data-name="نایک ایرفورس" data-price="1800000">
+                        <img src="نایک.jpg" alt="نایک ایرفورس">
+                        <h3>نایک ایرفورس</h3>
+                        <p class="description">کفش اسپرت مناسب استایل روزانه</p>
+                        <div class="price-container">
+                            <del class="old-price">2,200,000 تومان</del>
+                            <p class="price">1,800,000 تومان</p>
+                        </div>
+                        <button class="add-to-cart">افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+                <!-- می‌توانید ردیف‌های بیشتری اضافه کنید -->
+                <div class="products-row">
+                    <!-- محصول پنجم -->
+                    <div class="product" data-id="5" data-name="پوما کلاسیک" data-price="1700000">
+                        <img src="پوما.jpg" alt="پوما کلاسیک">
+                        <h3>پوما کلاسیک</h3>
+                        <p class="description">کفش اسپرت کلاسیک و راحت</p>
+                        <div class="price-container">
+                            <del class="old-price">2,100,000 تومان</del>
+                            <p class="price">1,700,000 تومان</p>
+                        </div>
+                        <button class="add-to-cart">افزودن به سبد خرید</button>
+                    </div>
+
+                    <!-- محصول ششم -->
+                    <div class="product" data-id="6" data-name="ریبوک کلاسیک" data-price="1900000">
+                        <img src="ریبوک.jpg" alt="ریبوک کلاسیک">
+                        <h3>ریبوک کلاسیک</h3>
+                        <p class="description">کفش اسپرت با طراحی مدرن</p>
+                        <div class="price-container">
+                            <del class="old-price">2,300,000 تومان</del>
+                            <p class="price">1,900,000 تومان</p>
+                        </div>
+                        <button class="add-to-cart">افزودن به سبد خرید</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <h2>راه های ارتباطی با ما</h2>
+        <ul class="social-links">
+            <li>
+                <a href="https://www.instagram.com/mohamad.amiri_19">
+                    <img src="icons8-instagram-26.png" alt="Instagram">
+                    <span>Instagram</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://t.me/MMDW_2">
+                    <img src="icons8-telegram-30.png" alt="Telegram">
+                    <span>Telegram</span>
+                </a>
+            </li>
+            <li>
+                <a href="tel:09900859556">
+                    <img src="icons8-phone-24.png" alt="Phone">
+                    <span>Phone</span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:wwwamirimohammad942@gmail.com">
+                    <img src="icons8-email-24.png" alt="Email">
+                    <span>Email</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="address">
+            <h3>آدرس فروشگاه</h3>
+            <p>کرمانشاه، میدان آزادی، پاساژ پرویز، طبقه دوم فروشگاه امیری</p>
+            <div class="map">
+                <h3>لوکیشن فروشگاه</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1959.2022872294676!2d47.09208650600136!3d34.3257232792732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ffaed1a9edd1155%3A0x7023198547f18106!2z2qnZhNin2YbYqtix24wg2LTZh9uM2KfYrw!5e0!3m2!1sfa!2s!4v1740300665744!5m2!1sfa!2s" 
+                    width="400" 
+                    height="400" 
+                    style="border: 5px solid;"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
